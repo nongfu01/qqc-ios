@@ -19,7 +19,7 @@ var rightView = myApp.addView('.view-right', {
 
 var openUrl = 'a.qqcapp.com';//a.qqcapp.com
 
-var testUrl = '192.168.1.101';//192.168.1.100
+var testUrl = 'a.qqcapp.com';//192.168.1.100
 
 //提交submit处理
 $$(document).on('submitted', function (e) {
