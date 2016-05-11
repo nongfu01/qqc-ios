@@ -1,0 +1,56 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left sliding"><a href="#" class="back link"><i class="icon icon-back color-white"></i><span></span></a></div>
+        <div class="center sliding">修改登录密码</div>
+    </div>
+</div>
+<div class="pages navbar-through">
+    <div data-page="change-pwd" class="page">
+        <div class="page-content">
+            <form class="list-block ajax-submit" action="http://192.168.1.101/index.php?con=api&act=index&method=customer&source=cpwd" method="POST">
+            <div class="list-block">
+                <input type="hidden" name="user_id" id="user_id" value="0">
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">新密码</div>
+                                <div class="item-input">
+                                    <input type="password" name="password" placeholder="密码必须是6-20位字母、数字或符号组成"/>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">确认密码</div>
+                                <div class="item-input">
+                                    <input type="password" name="repassword" placeholder="请再次填写密码"/>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">验证码</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder=""/>
+                                </div>
+                                <div class="item-after"><img width="80%" src="http://192.168.1.101/index.php?con=api&act=index&method=captchacode&h=40&w=120&bc=3f4657&c=ffffff"></div>
+                            </div>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <div class="row" style="text-align:center;">
+                  <div class="col-100"><input type="submit" class="button loginout button-big button-fill color-red" value="确定"></div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>

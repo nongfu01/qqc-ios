@@ -1,0 +1,39 @@
+
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left sliding"><a href="ucenter.html" class="back link"><i class="icon icon-back color-white"></i><span></span></a></div>
+        <div class="center sliding">登录</div>
+    </div>
+</div>
+<div class="pages navbar-through">
+<div data-page="login-index" class="page no-toolbar">
+  <form class="page-content ajax-submit" action="http://a.qqcapp.com/index.php?con=api&act=index&method=customer&source=login" method="POST">
+      <div class="list-block">
+      <ul>
+        <li class="item-content">
+          <div class="item-inner"> 
+            <div class="item-title label">手机号码</div>
+            <div class="item-input">
+              <input type="text" name="mobile" placeholder="请输入手机号码">
+            </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner"> 
+            <div class="item-title label">密码</div>
+            <div class="item-input">
+              <input type="password" name="password" placeholder="请输入密码">
+            </div>
+          </div>
+        </li>
+      </ul>
+      </div>
+      <div class="list-block">
+        <div class="row" style="text-align:center;">
+          <div class="col-100"><input type="submit" class="button loginout button-big button-fill color-red" value="登录"></div>
+        </div>
+      </div>
+      <a href="findpwd-step1.html" class="link" style="float:right;padding-right:20px;">忘记密码</a>
+  </form>
+</div>
+</div>

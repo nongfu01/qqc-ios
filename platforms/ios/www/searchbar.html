@@ -1,0 +1,33 @@
+
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left sliding"><a href="#" class="back link"><i class="icon icon-back color-white"></i><span></span></a></div>
+        <div class="center sliding">搜索商品</div>
+    </div>
+</div>
+<div class="pages navbar-through">
+<div data-page="searchbar" class="page">
+<form data-search-list=".search-here" data-search-in=".item-title" method="POST" action="http://192.168.1.101/index.php?con=api&act=index&method=searchany&source=goods" class="searchbar searchbar-init ajax-submit-onchange">
+    <div class="searchbar-input">
+        <input type="search" name="searchany" placeholder="搜索..."/><a href="#" class="searchbar-clear"></a>
+    </div><a href="#" class="searchbar-cancel">取消</a>
+</form>
+<div class="searchbar-overlay"></div>
+<div class="page-content searchany">
+    <!-- <div class="list-block searchbar-not-found">
+        <ul>
+            <li class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">没有找到商品</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="list-block search-here searchbar-found">
+    <ul>
+
+    </ul>
+    </div> -->
+</div>
+</div>
+</div>
