@@ -480,43 +480,24 @@ i.ucenter-bg {
 i.ucenter-myorders {
     width: 30px;
     height: 30px;
-    background-image: url("../img/我的订单.png");
-}
-
-i.ucenter-fav {
-    width: 30px;
-    height: 30px;
-    background-image: url("../img/我的收藏.png");
-}
-
-i.ucenter-share {
-    width: 30px;
-    height: 30px;
-    background-image: url("../img/我的分享.png");
-}
-
-
-i.ucenter-brower {
-    width: 30px;
-    height: 30px;
-    background-image: url("../img/我的浏览.png");
+    background-image: url("../img/myorders.png");
 }
 
 i.ucenter-about {
     height: 100px;
-    background-image: url("../img/客户服务.png");
+    background-image: url("../img/cservice.png");
 }
 
 i.ucenter-password {
     width: 30px;
     height: 30px;
-    background-image: url("../img/密码和登陆信息.png");
+    background-image: url("../img/pwdlogin.png");
 }
 
 i.ucenter-address {
     width: 30px;
     height: 30px;
-    background-image: url("../img/地址管理.png");
+    background-image: url("../img/addressmanage.png");
 }
 
 ._active {
