@@ -89,7 +89,7 @@
       <file leaf-file-name="searchbar.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/searchbar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="47" selection-start="628" selection-end="628" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="570">
+            <state line="11" column="47" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="570">
               <folding />
             </state>
           </provider>
@@ -98,7 +98,7 @@
       <file leaf-file-name="config.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="32" selection-start="222" selection-end="222" vertical-scroll-proportion="0.10507881" vertical-offset="0" max-vertical-offset="1335">
+            <state line="77" column="5" selection-start="5083" selection-end="5095" vertical-scroll-proportion="0.7554439" vertical-offset="704" max-vertical-offset="1335">
               <folding />
             </state>
           </provider>
@@ -135,9 +135,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="33" />
+    <option name="x" value="34" />
     <option name="y" value="23" />
-    <option name="width" value="1247" />
+    <option name="width" value="1246" />
     <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -403,15 +403,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="33" y="23" width="1247" height="777" extended-state="6" />
-    <editor active="true" />
+    <frame x="34" y="23" width="1246" height="777" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33443984" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.339701" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -419,11 +419,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -463,9 +463,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="76" selection-start="9614" selection-end="9614" vertical-scroll-proportion="0.0" vertical-offset="2525" max-vertical-offset="5745">
-          <folding />
-        </state>
+        <state line="180" column="76" selection-start="9614" selection-end="9614" vertical-scroll-proportion="0.0" vertical-offset="2525" max-vertical-offset="5745" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/icon.png">
@@ -641,9 +639,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="475" column="31" selection-start="35750" selection-end="35750" vertical-scroll-proportion="-5.4583335" vertical-offset="6994" max-vertical-offset="8010">
-          <folding />
-        </state>
+        <state line="475" column="31" selection-start="35750" selection-end="35750" vertical-scroll-proportion="-5.4583335" vertical-offset="6994" max-vertical-offset="8010" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/kitchen-sink.js">
@@ -697,16 +693,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/searchbar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="47" selection-start="628" selection-end="628" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="570">
+        <state line="11" column="47" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="570">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/platforms/ios/qqc-Ios/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1725">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1725" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/platforms/ios/www/res/icon/ios/icon-57-2x.png">
@@ -726,7 +720,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="32" selection-start="222" selection-end="222" vertical-scroll-proportion="0.10507881" vertical-offset="0" max-vertical-offset="1335">
+        <state line="77" column="5" selection-start="5083" selection-end="5095" vertical-scroll-proportion="0.7554439" vertical-offset="704" max-vertical-offset="1335">
           <folding />
         </state>
       </provider>

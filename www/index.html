@@ -123,6 +123,19 @@
                                   </ul>
                               </div>
 
+
+                          <div class="list-block">
+                            <ul>
+                              <li><a href="gallery.html" class="item-link">
+                                  <div class="item-content">
+                                    <div class="item-media"><i class="icon icon-f7"></i></div>
+                                    <div class="item-inner"> 
+                                      <div class="item-title">商品列表</div>
+                                    </div>
+                                  </div></a></li>
+                            </ul>
+                          </div>
+
                             <div class="list-block">
                                 <ul>
                                     <li>
@@ -286,17 +299,7 @@
                                 </ul>
                             </div>
 
-                            <div class="list-block">
-                            <ul>
-                              <li><a href="gallery.html" class="item-link">
-                                  <div class="item-content">
-                                    <div class="item-media"><i class="icon icon-f7"></i></div>
-                                    <div class="item-inner"> 
-                                      <div class="item-title">商品列表</div>
-                                    </div>
-                                  </div></a></li>
-                            </ul>
-                          </div>
+                            
                         </div>
                     </div>
                     <div id="tab2" class="page-content tab">
@@ -476,7 +479,7 @@
     var testUrl = 'a.qqcapp.com';
 
     $$.ajax({
-        url: 'http://'+openUrl+'/index.php?con=api&act=index&method=advert',
+        url: 'http://'+testUrl+'/index.php?con=api&act=index&method=advert',
         method: 'GET',
         async: false,
         //send "query" to server. Useful in case you generate response dynamically
@@ -500,7 +503,7 @@
     $$('.buttons-row').html('正在加载...');
 
     $$.ajax({
-        url: 'http://'+openUrl+'/index.php?con=api&act=index&method=gcat&source=index',
+        url: 'http://'+testUrl+'/index.php?con=api&act=index&method=gcat&source=index',
         method: 'GET',
         //send "query" to server. Useful in case you generate response dynamically
         success: function (data) {

@@ -21,6 +21,8 @@ var openUrl = 'a.qqcapp.com';//a.qqcapp.com
 
 var testUrl = 'a.qqcapp.com';//192.168.1.100
 
+
+
 //提交submit处理
 $$(document).on('submitted', function (e) {
     if (e.detail.xhr.requestUrl.indexOf('method=customer&source=login') >= 0) {
@@ -78,19 +80,32 @@ $$(document).on('submitted', function (e) {
 
     if(e.detail.xhr.requestUrl.indexOf('&method=customer&source=douinfo') >= 0){
 
-        // var result = JSON.parse(e.detail.data);
+        var result = JSON.parse(e.detail.data);
 
-        // if(result.status == 'succ'){
-        //     myApp.alert(result.msg);
-        //     window.localStorage.userid = result.data.user_id;
-        //     mainView.router.loadPage('ucenter.html');
-        // }else{
-        //     myApp.alert(result.msg);
-        // }
+        if(result.status == 'succ'){
+            myApp.alert(result.msg);
+            mainView.router.loadPage('ucenter.html');
+        }else{
+            myApp.alert(result.msg);
+        }
 
-        myApp.alert(e.detail.data);
         return;
 
+    }
+
+    if (e.detail.xhr.requestUrl.indexOf('&method=customer&source=cpwd') >= 0) {
+
+        var result = JSON.parse(e.detail.data);
+
+        if(result.status == 'succ'){
+            myApp.alert(result.msg);
+            window.localStorage.userid = null;
+            mainView.router.loadPage('ucenter.html');
+        }else{
+            myApp.alert(result.msg);
+        }
+
+        return;
     }
 
 });
@@ -1543,8 +1558,9 @@ myApp.onPageInit('swiper-loop', function (page) {
             success: function (data) {
                 if(data.status == 'succ') {
                     $$('.cart-count').text(data.data.count);
-                    myApp.alert(data.msg);
                 }
+
+                myApp.alert(data.msg);
             }
         });
     });
@@ -1557,7 +1573,7 @@ myApp.onPageInit('addressmanage',function (page){
 
     $$('.addressmanage ul').html('');
 
-    var url = 'http://'+openUrl+'/index.php?con=api&act=index&method=customer&source=address';
+    var url = 'http://'+testUrl+'/index.php?con=api&act=index&method=customer&source=address';
 
     var userid = window.localStorage.userid;
 
@@ -1566,13 +1582,20 @@ myApp.onPageInit('addressmanage',function (page){
         return false;
     }
 
-    $$.get(url, {id: userid}, function (data) {
-        $$('.addressmanage ul').html(data);
+    $$.ajax({
+        url: url+'&id='+userid,
+        method: 'GET',
+        async:false,
+        //send "query" to server. Useful in case you generate response dynamically
+        success: function (data) {
+            $$('.addressmanage ul').html(data);
+        }
     });
+
 
     $$('.addr-delete').on('click',function (e){
         $$.ajax({
-            url: 'http://'+testUrl+'/index.php?con=api&act=index&method=customer&source=doaddr&_act=del&id='+$$(this).attr('.aid'),
+            url: 'http://'+testUrl+'/index.php?con=api&act=index&method=customer&source=doaddr&_act=del&id='+$$(this).attr('aid')+'&user_id='+userid,
             method: 'GET',
             dataType:'json',
             async:false,
@@ -1584,8 +1607,9 @@ myApp.onPageInit('addressmanage',function (page){
     });
 
     $$('.set-default').on('click',function (e){
+
         $$.ajax({
-            url: 'http://'+testUrl+'/index.php?con=api&act=index&method=customer&source=doaddr&_act=setdefault&id='+$$(this).attr('.aid'),
+            url: 'http://'+testUrl+'/index.php?con=api&act=index&method=customer&source=doaddr&_act=setdefault&is_default=1&id='+$$(this).attr('aid')+'&user_id='+userid,
             method: 'GET',
             dataType:'json',
             async:false,
@@ -1661,6 +1685,7 @@ myApp.onPageInit('add-address',function (page){
             url: o.url,
             method: 'POST',
             dataType: 'json',
+            async:false,
             //send "query" to server. Useful in case you generate response dynamically
             success: function (data) {
                 $$.each(data, function(i, n){
@@ -1793,9 +1818,10 @@ myApp.onPageInit('user-info-edit', function (page){
     $$('#user_id').val(userid);
 
     $$.ajax({
-        url: 'http://'+openUrl+'/index.php?con=api&act=index&method=customer&source=uinfo&id='+userid,
+        url: 'http://'+testUrl+'/index.php?con=api&act=index&method=customer&source=uinfo&id='+userid,
         method: 'GET',
         dataType:'json',
+        async:false,
         //send "query" to server. Useful in case you generate response dynamically
         success: function (data) {
             // alert(data);
@@ -1931,7 +1957,6 @@ myApp.onPageInit('user-info-edit', function (page){
     var province = $$('#province').attr('province');
     var city = $$('#city').attr('city');
     var county = $$('#county').attr('county');
-
 
     var o = { url:"http://"+testUrl+"/index.php?con=api&act=index&method=arealist",selected:[province,city,county],selects:['#province','#city','#county'],initRunCallBack:true,callback:function(data){
         var text = new Array();
@@ -2113,16 +2138,16 @@ myApp.onPageBeforeInit('myorder-index', function (page){
         return false;
     }
 
-    var url = 'http://'+testUrl+'/index.php?con=api&act=index&method=customer&source=morders&id='+userid;
+    var url = 'http://'+testUrl+'/index.php?con=api&act=index&method=customer&id='+userid;
 
-
+    //全部订单
     $$.ajax({
-        url: url,
+        url: url+'&source=morders&type=all',
         method: 'GET',
         async:false,
         //send "query" to server. Useful in case you generate response dynamically
         success: function (data) {
-            $$('.myorderlists').append(data);
+            $$('.myorderlists').html(data);
         }
     });
 
@@ -2134,6 +2159,44 @@ myApp.onPageBeforeInit('myorder-index', function (page){
             $$('.cart-count').text(data);
         }
     });
+
+    //待支付订单
+
+    $$.ajax({
+        url: url+'&source=morders&type=waitpay',
+        method: 'GET',
+        async:false,
+        //send "query" to server. Useful in case you generate response dynamically
+        success: function (data) {
+            $$('.waitpayorderlists').html(data);
+        }
+    });
+
+
+    //待发货订单
+    $$.ajax({
+        url: url+'&source=morders&type=delivery',
+        method: 'GET',
+        async:false,
+        //send "query" to server. Useful in case you generate response dynamically
+        success: function (data) {
+            $$('.waitdeliveryorderlist').html(data);
+        }
+    });
+
+
+    //已完成订单
+    $$.ajax({
+        url: url+'&source=morders&type=finish',
+        method: 'GET',
+        async:false,
+        //send "query" to server. Useful in case you generate response dynamically
+        success: function (data) {
+            $$('.finishorderlist').html(data);
+        }
+    });
+
+
 });
 
 
@@ -2404,5 +2467,40 @@ myApp.onPageInit('checkout-index', function (page){
         }
     });
     
+
+    $$('.add-chekcout-click').on('click',function (e) {
+
+        e.preventDefault();
+
+        var user_remark = '';
+
+        var data = {address_id:$$('#address_id').val(),payment_id:$$('#payment_id').val(),userid:userid};
+        // alert(data);
+        var url = 'http://'+testUrl+'/index.php?con=api&act=index&method=carts&source=docheckout&userid='+userid;
+        
+        myApp.alert('正在提交订单...');
+
+        $$('.add-chekcout-click').attr('disabled','disabled');
+
+        $$.ajax({
+            url: url,
+            method: 'POST',
+             async:false,
+            data: data,
+            dataType:'json',
+            //send "query" to server. Useful in case you generate response dynamically
+            success: function (data) {
+                if(data.status == 'succ'){
+                    myApp.alert(data.msg);
+                    mainView.router.loadPage('orderdetail.html?id='+data.data.orderid);
+                }else{
+                    myApp.alert('订单创建失败,请稍后再试');
+                    mainView.router.loadPage('cart.html');
+                }
+                
+            }
+        });
+    });
+
 });
 
