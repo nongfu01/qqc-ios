@@ -33,6 +33,9 @@
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
     self.viewController = [[MainViewController alloc] init];
+    
+    self.viewController.wwwFolderName = @"www";
+    self.viewController.startPage = @"index.html";
     return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
